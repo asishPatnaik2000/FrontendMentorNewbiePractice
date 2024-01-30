@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Outfit";
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("./fonts/Outfit-VariableFont_wght.ttf") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 10px;
+}
+
+body {
+  --padding: 1rem;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Outfit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.188px;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  background: var(--Light-Grey, #D5E1EF);
+}
+
+.Container {
+  border-radius: 20px;
+  background: var(--White, #fff);
+  box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+  display: grid;
+  gap: 24px;
+  place-items: center;
+  padding: var(--padding);
+}
+
+.infoContainer {
+  width: 18rem;
+  text-align: center;
+}
+
+.heading-class {
+  color: var(--Dark-Navy, #1f314f);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Outfit;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.info-class {
+    color: var(--Grey, #7D889E);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.188px;
+    padding: 0.7rem 0.5rem 1.7rem 0.5rem;
+}
