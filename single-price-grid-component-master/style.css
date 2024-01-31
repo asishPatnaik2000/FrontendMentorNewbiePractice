@@ -1,0 +1,205 @@
+@font-face {
+  font-family: "Karla";
+  font-weight: 100 700;
+  src: url("./fonts/karla/Karla-VariableFont_wght.ttf");
+}
+
+:root {
+  --padding: 2.5rem;
+  --headingColor: #2ab3b1;
+  --mainContainerSubHeading: #c0df33;
+  --contentColor: #9aa7be;
+  --white: #fff;
+  --backgroundColor: #e6eff5;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* place-items: center; */
+  background-color: var(--backgroundColor);
+}
+
+.mainContainer {
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  display: grid;
+  gap: 1.25rem;
+  padding: var(--padding);
+  box-shadow: 0px 15px 30px 0px rgba(0, 81, 171, 0.15);
+}
+
+.subContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0rem;
+}
+
+.subContainerClass {
+  width: 19.8rem;
+  height: 16.1rem;
+  background-color: #2ab3b1;
+}
+
+.signUpButton {
+  width: 14.8rem;
+  height: 2.7rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c0df33;
+  color: #fff;
+  font-family: Karla;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  letter-spacing: -0.2px;
+}
+
+.accessText {
+  padding-top: 0.25rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Karla;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: -0.2px;
+}
+
+.faqClass {
+  background-color: #2ab3b1;
+  opacity: 0.8;
+  border-radius: 0rem 0rem 0.5rem 0rem;
+  /* width: 14.8rem; */
+  /* background-color: #fff */
+}
+
+.moneyInfo {
+  border-radius: 0rem 0rem 0rem 0.5rem;
+}
+
+.subscriptionText {
+  color: #fff;
+  font-family: Karla;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  /* justify-'content: center; */
+}
+
+.perMonthClass {
+  /* text-indent: 50%; */
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Karla;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: -0.2px;
+}
+
+.container-heading {
+  font-family: Karla;
+  font-style: normal;
+  color: var(--headingColor);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+
+.infoClass {
+  width: 34.7rem;
+}
+
+.subHeading {
+  color: var(--white);
+  font-family: Karla;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.225px;
+}
+
+.whyUsInfo {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: Karla;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.175px;
+}
+.contentClass {
+  color: var(--contentColor);
+  font-family: Karla;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: -0.2px;
+}
+
+.containerSubHeading {
+  color: var(--mainContainerSubHeading);
+  padding: 0.27rem 0rem 0.7rem 0rem;
+}
+
+.infoContainer {
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  background: #fff;
+}
+
+@media only screen and (max-width: 375px) {
+  .subContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* place-items: center; */
+    width: 100%;
+  }
+
+  .infoClass{
+    width: 16.8rem;
+  }
+
+  .subContainerClass{
+    width: 22rem;
+  }
+
+  .faqClass{
+    border-radius: 0rem 0rem 0.5rem 0.5remF;
+  }
+
+  .moneyInfo {
+    border-radius: 0rem 0rem 0rem 0rem;
+  }
+  
+}
