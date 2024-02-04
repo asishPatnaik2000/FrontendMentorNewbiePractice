@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-VariableFont_slnt\wght.ttf) format("truetype");
+}
+
+:root {
+  --padding: 2.5rem;
+  --mobilePadding: 1.5rem;
+  --backGroundColor: black;
+  --cardBackgroundColor: #1f1f1f;
+  --placeTextColor: #c4f82a;
+  --nameColor: white;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0rem;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  gap: 1.5rem;
+  border-radius: 0.8rem;
+  padding: var(--padding);
+  background-color: var(--cardBackgroundColor);
+}
+
+img {
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+}
+
+html,
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--backGroundColor);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: green;
+  line-height: 150%;
+  font-style: normal;
+  color: var(--nameColor);
+  caret-color: black;
+}
+
+.placeCenter {
+  display: grid;
+  place-items: center;
+}
+
+.personalInfoSection {
+  display: grid;
+  gap: 4px;
+}
+
+.placeInfo {
+  color: var(--placeTextColor);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.nameInfo {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.quote {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.buttonsContainer {
+  display: grid;
+  gap: 1rem;
+}
+
+.linkInfo {
+  background-color: var(--backGroundColor);
+  cursor: pointer;
+  caret-color: black;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  width: 19rem;
+  height: 2.9rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkInfo:hover {
+  background-color: var(--placeTextColor);
+  color: var(--backGroundColor);
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    padding: var(--mobilePadding);
+  }
+}
