@@ -1,0 +1,141 @@
+:root {
+  --padding: 2rem;
+  --background-color: #f2eae2;
+  --main-container-color: #ffffff;
+  --aquamarineColor: #3d8168;
+  --deepAquamarineColor: #1a4032;
+  --sectionName: #6c7289;
+  --sectionHeading: #1c232b;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("./Fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./Fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+/* css resets */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block; /* ensures that these elements behave as block-level elements, meaning they will stack vertically by default and will respect dimensions set via width and height properties. */
+  max-width: 100%; /* ensures that these elements do not exceed the width of their containing parent, allowing them to be responsive and scale down appropriately on smaller screens */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* ensures that padding and border are included in the element's total width and height, which helps to maintain consistent layout and spacing. */
+}
+
+* {
+  margin: 0; /* sets the margin of all elements to zero, removing any default margin that may be applied by the browser's stylesheet. */
+  font: inherit; /* instructs elements to inherit the font property from their parent element, ensuring consistent typography throughout the document. */
+}
+
+html,
+body {
+  height: 100%;
+  display: grid; /* to center the contents  of page */
+  place-items: center;
+  background-color: var(--background-color);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.mainContainer {
+  --content-spacing: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 0.7rem;
+  overflow: hidden; /* image was going out of bounds of div so this was used */
+  max-width: 37.5rem; /*height auto adjusts according to max-wudth when max-width was set so not required to set height manually to get required shape of container */
+  background-color: var(--main-container-color);
+  border: 1px solid transparent;
+}
+
+.infoContainer {
+  display: grid;
+  padding: var(--padding);
+  gap: var(--content-spacing);
+  font-family: "Montserrat";
+  word-spacing: 1px;
+}
+
+.sectionName {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: var(--sectionName);
+  text-transform: uppercase;
+}
+
+.sectionHeading {
+  font-family: "Fraunces";
+  font-size: 2rem;
+  letter-spacing: 0px;
+  line-height: 2rem;
+  font-weight: 700;
+  color: var(--sectionHeading);
+}
+
+.sectionInformation {
+  color: var(--sectionName);
+  font-weight: 500;
+  font-size: 0.88rem;
+  line-height: 1.45rem;
+}
+
+.priceContainer {
+  font-family: "Fraunces";
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: var(--aquamarineColor);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.previousPrice {
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--sectionName);
+  font-size: 0.8rem;
+  padding-top: 0.3rem;
+}
+
+.buttonClass {
+  background-color: var(--aquamarineColor);
+  padding: 0.75rem 0rem 0.9rem 0rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--main-container-color);
+}
+
+.buttonClass:hover {
+  background-color: var(--deepAquamarineColor);
+}
+
+@media only screen and (max-width: 600px) {
+  .mainContainer {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+}
