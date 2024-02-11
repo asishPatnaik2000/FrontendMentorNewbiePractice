@@ -1,0 +1,121 @@
+:root {
+  --backgrountColor: #f8eeff;
+  --containerColor: #ffffff;
+  --primaryColor: #301534;
+  --secondaryColor: #8b6990;
+  --hoverColor: #ad28eb;
+  --padding: 2.5rem;
+}
+
+@font-face {
+  font-family: "work-sans";
+  src: url("./Fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+/* ------------------------------------------------------- CSS RESET -------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  font-family: inherit;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+body {
+  background: url("./assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* background-size: 100% auto;  */
+  /* auto to keep aspect ration of image same or consistent  */
+  /* background-position: left top; */
+  /* Start from top left corner */
+  overflow-y: scroll;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #f8eeff;
+  font-family: "work-sans";
+  color: var(--primaryColor);
+}
+
+.mainContainer {
+  display: grid;
+  max-width: 37.5rem;
+  background-color: var(--containerColor);
+  padding: var(--padding) var(--padding) 1rem var(--padding);
+  height: fit-content;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.headingClass {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 3.5 rem;
+  font-weight: 700;
+}
+
+.questionClass {
+  cursor: pointer;
+  padding: 1.5rem 0rem 1.5rem 0rem;
+}
+
+.questionClass * {
+  pointer-events: none;
+}
+
+/* .questionClass:hover:has(>div:not(.hiddenClass))  */
+.questionClass:hover {
+  color: var(--hoverColor);
+}
+
+.questionWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.123rem;
+}
+
+.questionBorder {
+  border-top: 1px solid #f8eeff;
+}
+
+.answerClass {
+  padding-top: 1.5rem;
+  color: var(--secondaryColor);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+.hiddenClass {
+  display: none;
+}
+
+@media only screen and (max-width: 375px) {
+  :root {
+    --padding: 1.5rem;
+  }
+  body {
+    padding: 1rem;
+    background: url("./assets/images/background-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #f8eeff;
+  }
+}
