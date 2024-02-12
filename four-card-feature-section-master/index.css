@@ -1,0 +1,149 @@
+:root {
+  --backgroundColor: #fafafa;
+  --headingColor: #4d4f62;
+  --boxOneBorder: #00c8c8;
+  --boxTwoBorder: #ea5454;
+  --boxThreeBorder: #fcae4a;
+  --boxFourBorder: #549ef2;
+  --boxPadding: 2rem;
+  --boxBackground: #ffffff;
+  --sectionTextColor: #4d4f62;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+html,
+body {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  background-color: var(--backgroundColor);
+  font-family: "Poppins", sans-serif;
+  color: var(--headingColor);
+  margin: 1.5rem 0;
+}
+
+heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.box {
+  border: 0.25rem solid;
+  border-radius: 0.5rem;
+  width: 17.6rem;
+  height: fit-content;
+  padding: var(--boxPadding);
+  background-color: var(--boxBackground);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.box-one {
+  border-color: var(--boxOneBorder) transparent transparent transparent;
+}
+
+.box-two {
+  border-color: var(--boxTwoBorder) transparent transparent transparent;
+}
+
+.box-three {
+  border-color: var(--boxThreeBorder) transparent transparent transparent;
+}
+
+.box-four {
+  border-color: var(--boxFourBorder) transparent transparent transparent;
+}
+
+.sectionDescription {
+  font-weight: 400;
+  font-size: 0.78rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.09px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: end;
+  margin-top: 2.5rem;
+}
+
+.boxContainers {
+  display: grid;
+  gap: 3.25rem;
+  place-items: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.productDescription {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+}
+
+.centerBoxContainer {
+  display: grid;
+  gap: 3.25rem;
+}
+
+summary {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 1.7rem;
+  max-width: 28rem;
+  margin-top: 0.5rem;
+}
+
+.pageHeading {
+  font-weight: 200;
+  letter-spacing: 0.17px;
+  font-size: 1.5rem;
+}
+
+.productDescriptionHeading {
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 375px) {
+  .boxContainers {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .box {
+    width: 22rem;
+  }
+
+  body {
+    margin: 0 2rem 0 2rem;
+  }
+
+  .productDescriptionHeading {
+    font-size: 2.25rem;
+  }
+
+  .productDescription {
+    width: 100%;
+  }
+
+  .pageHeading {
+    font-size: 2.25rem;
+    letter-spacing: 0.25px;
+  }
+}
