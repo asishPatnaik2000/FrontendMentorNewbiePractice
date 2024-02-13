@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Poppins:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <main>
+      <article class="mainContainer">
+        <heading>PING<span class="pingName">.</span></heading>
+        <section class="launchingSoonSection">
+          <div class="launchingSoon">
+            We are launching <span class="spanClass">soon!</span>
+          </div>
+          <div class="subscribeClass">Subscribe and get notified</div>
+        </section>
+        <section>
+          <form
+            class="inputClass"
+            id="registerForm"
+            onsubmit="submitForm(event)"
+          >
+            <div class="inputContainer">
+              <input
+                id="inputBox"
+                type="text"
+                placeholder="Your email address"
+              />
+              <p class="errorClass hiddenClass">
+                Please provide a valid email address
+              </p>
+            </div>
+            <button class="notifyClass">Notify Me</button>
+          </form>
+        </section>
+        <section class="imgContainer">
+          <img
+            alt="pingProductImage"
+            src="./images/illustration-dashboard.png"
+          />
+        </section>
+        <footer class="footerClass">
+          <img alt="icons" src="./images/bottomIcons.svg" />
+          <div class="copyrightClass">
+            &copy; Copyright Ping. All rights reserved.
+          </div>
+        </footer>
+      </article>
+    </main>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
