@@ -1,0 +1,173 @@
+:root {
+  --background-color: #f3e5d7;
+  --content-color: white;
+  --headingColor: #312e2c;
+  --primaryTextColor: #5f564d;
+  --preparationTextBackgtoundColor: #fff7fb;
+  --secondaryHeadingColor: #7a284e;
+  --pageSubheadingColor: #854632;
+  --borderColor: #e3ddd7;
+}
+
+@font-face {
+  font-family: "outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "youngSerif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+/* css resets */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  display: block; /* ensures that these elements behave as block-level elements, meaning they will stack vertically by default and will respect dimensions set via width and height properties. */
+  max-width: 100%; /* ensures that these elements do not exceed the width of their containing parent, allowing them to be responsive and scale down appropriately on smaller screens */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* ensures that padding and border are included in the element's total width and height, which helps to maintain consistent layout and spacing. */
+}
+
+* {
+  margin: 0; /* sets the margin of all elements to zero, removing any default margin that may be applied by the browser's stylesheet. */
+  font: inherit; /* instructs elements to inherit the font property from their parent element, ensuring consistent typography throughout the document. */
+}
+
+body {
+  --padding: 2.5rem;
+  padding: 7.6rem 0rem;
+  height: 100%;
+  display: grid; /* to center the contents  of page */
+  place-items: center;
+  background-color: var(--background-color);
+  font-family: "outfit";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  color: var(--primaryTextColor);
+}
+
+main {
+  width: 50%;
+  padding: var(--padding);
+  background-color: var(--content-color);
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+}
+
+.recipeImageClass {
+  margin-bottom: 2.5rem;
+}
+
+.contentHeading {
+  color: var(--headingColor);
+  font-size: 2.5rem;
+  line-height: 100%;
+  font-family: "youngSerif";
+}
+
+.mainInfoClass {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.preparationDetails {
+  padding: 1.75rem;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  background-color: var(--preparationTextBackgtoundColor);
+  color: var(--secondaryHeadingColor);
+}
+
+.preparationDetailsHeading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+ol {
+  padding-left: 1rem; /* Remove default padding */
+  padding-top: 1rem; /* Add padding to the top */
+  padding-bottom: 1rem; /* Add padding to the bottom */
+  line-height: 150%;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1rem; /* Remove default padding */
+  padding-top: 1rem; /* Add padding to the top */
+  padding-bottom: 1rem; /* Add padding to the bottom */
+  line-height: 150%;
+}
+
+.preparationList {
+  margin-top: 1rem;
+}
+
+li {
+  width: 90%;
+  color: var(--primaryTextColor);
+  line-height: 150%;
+  margin-bottom: 0.5rem; /* Adjust as needed */
+}
+
+li span {
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.preparationList li::marker {
+  color: var(--secondaryHeadingColor);
+}
+
+li::marker {
+  color: var(--pageSubheadingColor);
+}
+heading {
+  margin-bottom: 2.5rem;
+  color: var(--pageSubheadingColor);
+  font-size: 1.5rem;
+  line-height: 100%;
+  font-family: "youngSerif";
+}
+
+.ingredientsClass,
+.instructionsClass,
+.nutritionDetailBorder {
+  padding-bottom: 2rem;
+  border-bottom: 0.1rem solid var(--borderColor);
+}
+
+.nutritionDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0rem;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: 100%;
+    border-radius: 0rem;
+  }
+  body {
+    --padding: 0rem;
+    padding: 0rem 0rem;
+  }
+  .mainInfoClass,
+  .contentHeading {
+    padding: 0rem 2rem;
+  }
+}
