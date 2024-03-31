@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  --backgroundColor: hsl(233, 47%, 7%);
+  --boxBackground: hsl(244, 38%, 16%);
+  --highligtedText: hsl(277, 64%, 61%);
+  --headingColor: hsl(0, 0%, 100%);
+  --paragraphColor: hsla(0, 0%, 100%, 0.75);
+  --statHeadingColor: hsla(0, 0%, 100%, 0.6);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  font-style: inherit;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--backgroundColor);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: fit-content;
+  max-width: 80%;
+  background-color: var(--boxBackground);
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  font-family: Inter, "sans serif";
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  color: var(--headingColor);
+  margin-bottom: 1.5rem;
+  width: 75%;
+}
+
+.highlightedText {
+  color: var(--highligtedText);
+}
+
+.textSection {
+  height: 100%;
+  padding: 4.5rem 4.5rem 3.5rem 4.5rem;
+}
+
+.paragraphSection {
+  font-family: "Inter", "sans serif";
+  font-size: 0.99rem;
+  line-height: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--paragraphColor);
+  max-width: 70%;
+  margin-bottom: 4.5rem;
+}
+
+.ratingsContainer {
+  display: flex;
+  gap: 3.94rem;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  /* font-family: 'Lexend Deca', sans-serif; */
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: var(--paragraphColor);
+  text-transform: uppercase;
+}
+
+.statHeading {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  /* img {
+    width: 2;
+  } */
+  img {
+    max-width: 100%;
+  }
+  body {
+    padding: 5rem 1.5rem 5rem 1.5rem;
+    width: 100%;
+  }
+
+  .ratingsContainer {
+    flex-direction: column;
+  }
+
+  .textSection {
+    text-align: center;
+    margin: 4rem 0rem 4rem 0rem;
+    padding: 0 1rem;
+  }
+
+  header {
+    width: 100%;
+  }
+  .paragraphSection{
+    max-width: 100%;
+    text-align: center;
+    padding: 0rem 2rem;
+  }
+}
